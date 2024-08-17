@@ -1,0 +1,117 @@
+/* Services Section */
+.services {
+  color: white;
+  padding: 50px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.headingTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.headingTop h3 {
+  font-size: 32px; /* Increased font size for "My Services" */
+  font-weight: bold;
+  color: #fff;
+  margin: 0; /* Removes default margin */
+}
+
+.line {
+  height: 2px;
+  background: #20C863;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.line2 {
+  width: 40px;
+}
+
+.headingBottom h2 {
+  font-size: 35px;
+  color: #20C863;
+  margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.box {
+  background: #000000;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+}
+
+.img {
+  position: absolute;
+  top: -30px;
+  left: 50%; /* Centers the icon horizontally */
+  transform: translateX(-50%); /* Correctly centers the icon */
+  width: 70px;
+  height: 70px;
+  background: #20C863;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.text {
+  margin-top: 50px;
+}
+
+hr {
+  width: 30px;
+  background: #20C863;
+  border: 2px solid #20C863;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .text {
+    margin-top: 70px;
+  }
+}

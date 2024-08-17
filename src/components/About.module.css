@@ -1,0 +1,213 @@
+.about {
+    background: #0F161C;
+    color: white;
+  }
+  
+  .background2 {
+    background: #0F161C;
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+  
+  .left, .right {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .content {
+    margin-top: 30px;
+    margin-right: 60px;
+    margin-left: 80px;
+    margin-bottom: 50px;
+  }
+  
+  .items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 20px;
+  }
+  
+  .box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #040913;
+    border-radius: 50%;
+    text-align: center;
+    padding: 40px;
+    margin: 20px;
+  }
+  
+  .number {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: #20C863;
+    border-radius: 50%;
+    line-height: 50px;
+    font-weight: 500;
+  }
+  
+  .text h3 {
+    margin: 0;
+  }
+  
+  .heading {
+    margin-bottom: 30px;
+  }
+  
+  .heading_top {
+    display: flex;
+    align-items: center;
+  }
+  
+  .line {
+    height: 2px;
+    background: #20C863;
+    margin: 0 10px;
+  }
+  
+  .line2 {
+    width: 40px;
+  }
+  
+  .heading_bottom h2 {
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .heading_bottom span {
+    color: #20C863;
+  }
+  
+  h4 {
+    font-size: 32px;
+  }
+  
+  .btn2 {
+    background: none;
+    border: 2px solid #20C863;
+    color: #20C863;
+    border-radius: 15px;
+    padding: 15px 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn3 {
+    background: none;
+    border: 2px solid #20C863;
+    color: #20C863;
+    margin-top: 30px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn3:hover {
+    background: #20C863;
+    color: white;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .mtop {
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .content {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+  
+    .heading_bottom h2 {
+      font-size: 30px;
+    }
+  
+    .h4 {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column; /* Stack the left and right sections vertically */
+    }
+  
+    .items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  
+    .box {
+      width: 130px;
+      height: 130px;
+      padding: 30px;
+    }
+  
+    .heading_bottom h2 {
+      font-size: 28px;
+    }
+  
+    .h4 {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .content {
+      margin-right: 10px;
+     
+      margin-left: 10px;
+    }
+  
+    .heading_bottom h2 {
+      font-size: 24px;
+    }
+  
+    .h4 {
+      font-size: 20px;
+    }
+  
+    .btn2, .btn3 {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    .box {
+      width: 100px;
+      height: 100px;
+      padding: 20px;
+      margin: 10px;
+    }
+  
+    .number {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+  

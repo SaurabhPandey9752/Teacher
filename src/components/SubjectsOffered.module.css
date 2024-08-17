@@ -1,0 +1,210 @@
+/* Subject Offered Section */
+.section {
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 90%;
+    margin: 15px auto;
+    
+    padding: 0 20px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #fff; /* Updated color to match new heading style */
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 35px; /* Increased font size */
+    color: #20C863; /* Updated color */
+    font-weight: 400;
+    margin-bottom: 50px; /* Adjusted margin */
+}
+
+.gridList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted to reduce width */
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Center the grid items */
+}
+
+.subjectCard {
+    width: 450px; /* Fixed width to make the cards narrower */
+    position: relative;
+    background-color: #000; /* Updated background color */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 500px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.subjectCard:hover {
+    transform: translateY(-5px); /* Reduced movement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduced shadow blur */
+    animation: shine 0.75s forwards; /* Apply subtle shine effect */
+}
+
+.imgHolder {
+    overflow: hidden;
+    height: 50%; /* Adjusted to fit new card height */
+}
+
+.imgCover {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    object-fit: cover;
+}
+
+.subjectCard:hover .imgCover {
+    transform: scale(1.05); /* Slightly reduced scale */
+}
+
+.cardContent {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    /* Custom scrollbar styles */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #20C863 #000; /* For Firefox */
+}
+
+.cardContent::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.cardContent::-webkit-scrollbar-track {
+    background: #000; /* Background color of the scrollbar track */
+    border-radius: 10px;
+}
+
+.cardContent::-webkit-scrollbar-thumb {
+    background: #20C863; /* Color of the scrollbar handle */
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.cardContent::-webkit-scrollbar-thumb:hover {
+    background: #16a755; /* Darker color on hover */
+}
+
+.badge {
+    background-color: #20C863; /* Updated badge color */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.cardTitle {
+    font-size: 24px;
+    margin: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff; /* Updated title color */
+}
+
+.cardDescription {
+    font-size: 16px;
+    color: #aaa; /* Updated description color */
+}
+
+.readMoreBtn {
+    background-color: transparent;
+    color: #20C863; /* Updated button color */
+    padding: 10px 15px;
+    border: 1px solid #20C863; /* Updated border color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.readMoreBtn:hover {
+    background-color: #20C863; /* Updated hover background color */
+    color: #fff;
+}
+
+.btn {
+    display: block;
+    margin: 40px auto 0;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+/* Shining animation */
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 8px #fff, 0 0 15px #fff, 0 0 20px #20C863, 0 0 25px #20C863; /* Reduced glowing effect */
+    }
+    100% {
+        box-shadow: 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #20C863, 0 0 30px #20C863; /* Reduced glowing effect */
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .subjectCard {
+        max-width: 400px; /* Adjust for larger tablets */
+    }
+}
+
+@media (max-width: 992px) {
+    .subjectCard {
+        max-width: 350px; /* Adjust for tablets and small laptops */
+    }
+}
+
+@media (max-width: 768px) {
+    .subjectCard {
+        max-width: 300px; /* Adjust for mobile devices */
+        height: auto; /* Allow height to adjust automatically */
+    }
+    .title {
+        font-size: 28px; /* Adjust title size for smaller screens */
+    }
+    .subtitle {
+        font-size: 30px; /* Adjust subtitle size for smaller screens */
+    }
+    .gridList {
+        gap: 20px; /* Reduce gap between cards on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .subjectCard {
+        max-width: 100%; /* Make cards full width on very small screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
+    .title {
+        font-size: 24px; /* Further adjust title size */
+    }
+    .subtitle {
+        font-size: 24px; /* Further adjust subtitle size */
+    }
+}

@@ -1,0 +1,147 @@
+/* Hero.module.css */
+
+.heroSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+  }
+  
+  .heroContainer {
+    position: absolute;
+    inset: 0;
+    top: 120px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+  }
+  
+  .leftDecoration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #20C863;
+  }
+  
+  .line {
+    width: 4px;
+    height: 80vh;
+    background: linear-gradient(90deg, #8b5cf6, #d946ef);
+  }
+  
+  .heroContent {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 24px;
+    z-index: 20;
+  }
+  
+  .heroText {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: start;
+  }
+  
+  .heroName {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .heroTeach {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #20C863;
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+    color: #9ca3af;
+  }
+  
+  .biographyButton {
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    max-width: 200px;
+    cursor: pointer;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .animatedImage {
+    width: 340px;
+    height: 340px;
+    background-size: cover;
+    background-position: center;
+    margin: 30px;
+    box-shadow: 0 5px 5px 5px rgba(13, 110, 253, 0.2);
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background-color: #20C863;
+  }
+  
+  @keyframes animate {
+    0%, 100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      background-color: #20C863;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      background-color: #2d2d2d;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .heroContainer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .line {
+      height: 40vh;
+    }
+  
+    .heroText {
+      font-size: 1.2rem;
+    }
+  
+    .heroName {
+      font-size: 1.5rem;
+    }
+  
+    .heroTeach {
+      font-size: 1.2rem;
+    }
+  
+    .biographyButton {
+      width: 100%;
+    }
+  }
+  
