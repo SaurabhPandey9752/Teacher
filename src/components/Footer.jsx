@@ -67,7 +67,7 @@ const Footer = () => {
 
                 <div className="w-full text-center mt-[20px]">
                     <hr className="border-0 h-[2px] w-full bg-[#20C863] my-[10px]" />
-                    <div className="text-[15px] text-gray-400 flex flex-col items-center">
+                    <div className="text-[15px] text-gray-400 flex flex-col items-center mb-[60px]">
                         <span>&copy; Made By Saurabh 11.06.2024 Inc.</span>
                         <a
                             href="mailto:pandeysaurabh9752@gmail.com"

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Typed from 'typed.js';
 import { motion } from 'framer-motion';
 import { slideInFromLeft, slideInFromRight } from '../utils/motion';
+import ReactStars from "react-rating-stars-component";
 
 const HeroContent = () => {
   useEffect(() => {
@@ -10,7 +11,7 @@ const HeroContent = () => {
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 1000,
-      loop: true
+      loop: true,
     });
 
     return () => {
@@ -18,77 +19,120 @@ const HeroContent = () => {
     };
   }, []);
 
+  const averageRating = 4.85;
+  const totalReviews = 200;
+
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      className="flex flex-col-reverse md:flex-row items-center justify-center mt-20 md:mt-40 w-full z-[20] px-6 md:px-0"
-    >
-      <div className="h-full w-full flex flex-col gap-5 justify-center text-start md:m-auto md:px-24">
-        <motion.div
-          variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-10 text-4xl md:text-6xl font-bold text-white max-w-[600px]"
-        >
-          <h3 className="text-[1.8rem] md:text-[2.5rem] font-bold">Md Abdal Khan</h3>
-          <h3 className="text-[1.4rem] md:text-[1.8rem] font-bold">I Teach <span className="multiple-text text-[#0ef]"></span></h3>
-        </motion.div>
-
-        <motion.p
-          variants={slideInFromLeft(0.8)}
-          className="text-base md:text-lg text-gray-400 my-1 max-w-[600px]"
-        >
-          Independent tutor with 3+ years of experience in Mathematics, Coding, SQL, and Science. I tailor lessons to each student’s needs for effective learning.
-        </motion.p>
-
-        <motion.a
-          href='/Saurabh_s_Resume.pdf'
-          variants={slideInFromLeft(1)}
-          className=" py-2 px-1 bg-blue-500 text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
-          Biography
-        </motion.a>
-      </div>
-
+    <section className="relative w-full min-h-screen bg-cover bg-center flex items-center justify-center mt-0 z-10 mb-10 px-4">
       <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center mb-10 md:mb-0"
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-between text-center md:text-left w-full max-w-screen-lg mx-auto z-10"
       >
-        <img
-          src="/Abdal.png"
-          alt="work icons"
-          style={{
-            width: "340px",
-            height: "340px",
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-            margin: "30px",
-            boxShadow: "0 5px 5px 5px rgba(13, 110, 253, 0.2)",
-            animation: "animate 5s ease-in-out infinite",
-            transition: "all 1s ease-in-out",
-            borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
-          }}
-        />
-        <style jsx>{`
-          @keyframes animate {
-            0%, 100% {
-              border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            }
-            50% {
-              border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-            }
-          }
-        `}</style>
-      </motion.div>
+        <div className="flex flex-col gap-5 justify-center text-start md:px-6 lg:px-12">
+          <motion.div
+            variants={slideInFromLeft(0.5)}
+            className="flex flex-col gap-4 mt-6 text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-xl "
+          >
+            <h3 className="text-[1.8rem] md:text-[2.5rem] font-bold">Md Abdal Khan</h3>
+            <h3 className="text-[1.4rem] md:text-[1.8rem] font-bold">
+              I Teach <span className="multiple-text text-[#20C863]"></span>
+            </h3>
+          </motion.div>
 
-      {/* <div className="w-[40px] hidden md:block fixed bottom-0 right-[20px] lg:right-[25px] z-10 text-primaryText" style={{ opacity: 1 }}>
-        <div className="flex flex-col items-center relative">
-          <a href="mailto:tapesh.dua420@gmail.com" rel="noopener noreferrer" target="_blank" className="font-mono text-sm my-[20px] mx-auto p-[10px] tracking-widest transition hover:-translate-y-[5px] duration-300 text-secondaryText hover:text-themeBlue" style={{ writingMode: "vertical-rl", color:"#fff" }}>
-            pandeysaurabh9752@gmail.com
-          </a>
-          <div className="block w-[1px] h-[90px] mx-auto my-0 bg-white"></div>
+          <motion.p
+            variants={slideInFromLeft(0.8)}
+            className="text-sm md:text-base lg:text-lg text-gray-300 my-1 max-w-xl mx-auto"
+          >
+            Independent tutor with 3+ years of experience in Mathematics, Coding, SQL, and Science. I tailor lessons to each student’s needs for effective learning.
+          </motion.p>
+
+          {/* Find Me On Section */}
+          <motion.div
+            variants={slideInFromLeft(1.2)}
+            className="flex flex-col gap-4 md:gap-6 mt-6 md:mt-8 max-w-sm  lg:mb-1"
+          >
+            <h4 className="text-white text-lg md:text-xl font-semibold">Find me on:</h4>
+            <div className="flex gap-4 justify-center md:justify-start items-center">
+              {/* TeacherOn Image */}
+              <a
+                href="https://www.connectbud.com/viewProfile/MD-ABDAL-KHAN"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-full h-full"
+              >
+                <img
+                  src="/logo-DMCH9fmY.png"
+                  alt="TeacherOn"
+                  className="w-full h-full object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-sm md:text-base">ConnectBud</span>
+                </div>
+              </a>
+
+              {/* ConnectBud Image */}
+              <a
+                href="https://www.teacheron.com/tutor/8aKh?r=8aKh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-full h-full"
+              >
+                <img
+                  src="/viewMyProfile.png"
+                  alt="ConnectBud"
+                  className="w-full h-full object-cover rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-sm md:text-base">TeacherOn</span>
+                </div>
+              </a>
+            </div>
+          </motion.div>
         </div>
-      </div> */}
-    </motion.div>
+
+        <motion.div
+          variants={slideInFromRight(0.8)}
+          className="flex flex-col items-center justify-center mt-8 md:mt-0 mb-8 md:mb-0"
+        >
+          <img
+            src="/43.png"
+            alt="work icons"
+            className="w-40 h-40 mt-[30px] md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] bg-cover bg-center shadow-lg transition-all duration-500"
+            style={{
+              boxShadow: "0 5px 5px 5px rgba(13, 110, 253, 0.2)",
+              animation: "animate 5s ease-in-out infinite",
+            }}
+          />
+          <style jsx>{`
+            @keyframes animate {
+              0%, 100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+              }
+              50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+              }
+            }
+          `}</style>
+
+          <div className="flex flex-col items-center justify-center mt-4 md:mt-6">
+            <div className="flex items-center gap-2">
+              <ReactStars
+                count={5}
+                value={averageRating}
+                size={24}
+                isHalf={true}
+                activeColor="#ffd700"
+                edit={false}
+              />
+              <span className="text-sm md:text-base lg:text-lg text-[#20C863] font-semibold">
+                ({averageRating.toFixed(2)})
+              </span>
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

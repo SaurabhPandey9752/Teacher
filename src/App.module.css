@@ -1,0 +1,46 @@
+/* Default styles */
+.section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Extra-small screens (480px and up) */
+  @media (min-width: 480px) {
+    .section {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  /* Small screens (640px and up) */
+  @media (min-width: 640px) {
+    .section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  
+  /* Medium screens (768px and up) */
+  @media (min-width: 768px) {
+    .section {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  
+  /* Large screens (1024px and up) */
+  @media (min-width: 1024px) {
+    .section {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+  
+  /* Extra-large screens (1280px and up) */
+  @media (min-width: 1280px) {
+    .section {
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+  }
+  

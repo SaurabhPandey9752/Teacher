@@ -1,7 +1,10 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx}"],
-  mode: "jit",
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./public/index.html"
+  ],
   theme: {
     extend: {
       colors: {
@@ -22,10 +25,7 @@ module.exports = {
         'lg': '1024px', // Large screens
         'xl': '1280px', // Extra-large screens
         '2xl': '1536px', // 2x extra-large screens
-        'mb': '576px', // Custom breakpoint for medium small screens (if needed)
-        'tablet': '640px',
-        'laptop': '1024px',
-        'desktop': '1280px',
+        'mb': '576px',
       },
       spacing: {
         'custom-large': '400px',
@@ -37,3 +37,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+export default config;

@@ -1,0 +1,42 @@
+.contactButtonWrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #000; /* Background color for the button container */
+    z-index: 30; /* Higher z-index to ensure it's above HeroContent */
+  }
+  
+  .contactButton {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #20C863; /* Button background color */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contactButton:hover {
+    background-color: #1a9b5f; /* Darker shade on hover */
+  }
+  
+  .icon {
+    margin-right: 0.5rem; /* Space between icon and text */
+  }
+  
+  .text {
+    font-weight: 600;
+  }
+  
+  @media (min-width: 768px) {
+    .contactButtonWrapper {
+      display: none; /* Hide button on larger screens */
+    }
+  }
+  
