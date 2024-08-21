@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { motion } from 'framer-motion';
-
 import 'react-vertical-timeline-component/style.min.css';
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
@@ -50,29 +49,45 @@ const ExperienceCard = ({ experience }) => {
     </VerticalTimelineElement>
   );
 };
-
 const Experience = () => {
   const experiences = [
     {
-      title: "Independent Advisor",
+      title: "Independent Tutor",
       company_name: "Connectbud",
-      icon: "/redux.png", // Replace with actual icon path
+      icon: "/logo-DMCH9fmY.png", // Replace with actual icon path
       iconBg: "#E6DEDD",
-      date: "Oct 2021 – Present",
+      date: "Jan 2022 – Present",
       points: [
-        "I take classes for NRI (Non-Resident Indian) children residing in the USA. My instruction covers subjects such as mathematics, coding, and preparation for AMC 8/10 and SAT competitions, among other topics.",
-        "Here's my ConnectBud Profile for your reference: https://www.connectbud.com/viewprofile/MD-ABDAL-KHAN"
+        "I take classes for NRI (Non-Resident Indian) children residing in the USA.",
+        "Here's my ConnectBud Profile for your reference:",
+        <a 
+        href="https://www.connectbud.com/viewProfile/MD-ABDAL-KHAN" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className='text-[#20C863] underline'
+      >
+      ConnectBuds
+      </a>,
       ],
     },
     {
-      title: "Microsoft 365 Knowledge",
-      company_name: "Self-Taught",
-      icon: "/meta.png", // Replace with actual icon path
+      title: "Independent Advisor",
+      company_name: "Microsoft",
+      icon: "/microsoft.png", // Replace with actual icon path
       iconBg: "#E6DEDD",
-      date: "Ongoing",
+      date: "Jan 2022 – Sept 2023",
       points: [
-        "Extensive knowledge of Microsoft 365 Home and Microsoft 365 Business apps, including their features and functionalities.",
-        "Skilled in utilizing these tools to enhance productivity and collaboration in various settings.",
+        "Helped Microsoft customers with their queries related to Microsoft 365 Home and Microsoft 365 Business apps.",
+        "Provided guidance on utilizing these tools to enhance productivity and collaboration.",
+        "Here's proof of my work: ",
+        <a 
+          href="https://answers.microsoft.com/en-us/profile/8f305a9c-4eb9-48cf-903e-b0b2e975cc69" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className='text-[#20C863] underline'
+        >
+          Microsoft Advisor Proof
+        </a>,
       ],
     },
   ];
@@ -86,6 +101,7 @@ const Experience = () => {
         "Focused on Mathematics and Computer Science with comprehensive coursework and practical applications.",
         "Worked on various projects related to software development, data analysis, and algorithm design.",
       ],
+      icon: "/Birla.png", // Replace with actual logo path
     },
   ];
 
@@ -113,6 +129,15 @@ const Experience = () => {
               contentArrowStyle={{ borderRight: "7px solid #20C863" }} // Arrow with the green color
               date={edu.date}
               iconStyle={{ background: "#E6DEDD" }} // Icon background color
+              icon={
+                <div className='flex justify-center items-center w-full h-full'>
+                  <img
+                    src={edu.icon}
+                    alt={edu.institution}
+                    className='w-[60%] h-[60%] object-contain'
+                  />
+                </div>
+              }
             >
               <div>
                 <h3 className='text-[#20C863] text-[24px] font-bold'>{edu.title}</h3>

@@ -10,6 +10,7 @@ import axios from "axios";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import FeedbackForm from "./FeedbackForm";
 
 const FeedbackCard = ({
   index,
@@ -62,16 +63,17 @@ const Feedbacks = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/v1/getAllReviews");
-        console.log("Fetched Data:", response.data); // Log the data
+        console.log("Fetched Data:", response.data);
         setTestimonials(response.data.data || []);
         setLoading(false);
       } catch (err) {
-        console.error("Error fetching testimonials:", err); // Log the error
+        console.error("Error fetching testimonials:", err);
         setError("Failed to fetch testimonials");
         setLoading(false);
       }
@@ -80,15 +82,17 @@ const Feedbacks = () => {
     fetchTestimonials();
   }, []);
 
+  const handleOpenForm = () => setShowForm(true);
+  const handleCloseForm = () => setShowForm(false);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
   // Calculate total number of reviews and average rating
   const totalReviews = testimonials.length;
   const averageRating =
-    totalReviews > 0
-      ? testimonials.reduce((acc, testimonial) => acc + testimonial.rating, 0) / totalReviews
-      : 0;
+    testimonials.reduce((acc, testimonial) => acc + testimonial.rating, 0) /
+    totalReviews;
 
   const settings = {
     dots: true,
@@ -134,8 +138,10 @@ const Feedbacks = () => {
   };
 
   return (
-    <div className="mt-12 bg-black-100 rounded-[20px]">
-      <div className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}>
+    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+      <div
+        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+      >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>What others say</p>
           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
@@ -151,6 +157,12 @@ const Feedbacks = () => {
             />
           </p>
         </motion.div>
+        <button
+          onClick={handleOpenForm}
+          className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4"
+        >
+          Give Feedback
+        </button>
       </div>
       <div className={`-mt-20 pb-14 ${styles.paddingX}`}>
         <Slider {...settings}>
@@ -159,8 +171,10 @@ const Feedbacks = () => {
           ))}
         </Slider>
       </div>
+      {showForm && <FeedbackForm onClose={handleCloseForm} />}
     </div>
   );
 };
 
 export default SectionWrapper(Feedbacks, "");
+    

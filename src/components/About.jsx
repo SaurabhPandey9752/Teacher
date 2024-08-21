@@ -3,9 +3,9 @@ import styles from './About.module.css';
 
 const About = () => {
   return (
-    <section className={`${styles.about} ${styles.background2}`}>
-      <div className={styles.container}>
-        <div className={styles.left}>
+    <section id="about" className={`${styles.about} ${styles.background2}`}>
+    <div className={styles.container}>
+      <div className={styles.left}>
           <div className={styles.dots}>
             <i className="fas fa-circle"></i>
             <i className="fas fa-circle"></i>
@@ -37,7 +37,7 @@ const About = () => {
                   <h5>15+</h5>
                 </div>
                 <div className={styles.text}>
-                  <h3>Projects in Progress</h3>
+                  <h3>Projects Progress</h3>
                 </div>
               </div>
               <div className={styles.box}>
@@ -63,10 +63,13 @@ const About = () => {
             <div className={styles.heading_bottom}>
               <h2><span>Unleash Your Creativity</span></h2>
             </div>
-            <h4 className={`${styles.descriptionText}`}>A Lead Associate Professor in Machine Learning with 5+ Years of Experience.</h4>
+            <h4 className={`${styles.descriptionText}`}>
+              I am a dedicated and passionate tutor with over 3 years of teaching experience. I have a postgraduate degree (MSc) in Mathematics and Computer Science, which has given me a strong foundation in these subjects. I have had the chance to teach many students, helping them do well in their studies and come out from the fear of Mathematics and Coding.
+            </h4>
           </div>
-          <p className={`${styles.descriptionText}`}>Currently, I am leading two projects and have published numerous papers in internationally renowned conference journals.</p>
-          <button className={`${styles.btn2} ${styles.btn3}`}>Download CV</button>
+          <p className={`${styles.descriptionText}`}>
+            Currently, I am leading two projects and have published numerous papers in internationally renowned conference journals.
+          </p>
         </div>
       </div>
     </section>

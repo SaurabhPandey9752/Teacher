@@ -1,3 +1,4 @@
+/* Contact.module.css */
 .contact {
   margin-top: 40px;
   display: flex;
@@ -38,7 +39,7 @@
 .contactText {
   font-size: 1rem;
   margin-bottom: 1.5em; /* Reduced margin-bottom */
-  width: 60vw;
+  width: 60vw; /* Adjusted width */
 }
 
 .contactCta {
@@ -51,6 +52,8 @@
 
 /* Enhanced Button Styling */
 .btn {
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
   color: #fff;
   padding: 0.75em 1.5em;
   text-decoration: none;
@@ -74,4 +77,8 @@
 
 .btn:active {
   transform: scale(0.98);
+}
+
+.btn svg {
+  margin-right: 8px; /* Space between icon and text */
 }

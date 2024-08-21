@@ -7,8 +7,10 @@ import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import StatsSection from "./components/StatsSection";
 import SubjectsOffered from "./components/SubjectsOffered";
+import FeedbackButton from "./components/FeedbackButton";
 import Subjects from "./components/Subjects";
 import Footer from "./components/Footer";
+import ReviewManager from "./components/ReviewManager";
 import ContactButton from "./components/ContactButton"; // Import the ContactButton component
 
 const App = () => {
@@ -27,7 +29,9 @@ const App = () => {
         <SubjectsOffered/>
         <Subjects/>
         <Experience />
+        {/* <ReviewManager/> */}
         <Feedbacks />
+        <FeedbackButton/>
 
         <div className='relative z-0'>
           <Contact />

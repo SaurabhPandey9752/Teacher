@@ -87,6 +87,22 @@ const HeroContent = () => {
                   <span className="text-white text-sm md:text-base">TeacherOn</span>
                 </div>
               </a>
+              <a
+                href="https://www.linkedin.com/in/md-abdal-khan-976192194?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-full h-full"
+              >
+                <img
+                  src="/Linkedin.png"
+                  alt="ConnectBud"
+                  className="w-full h-full object- rounded-sm  shadow-lg transform transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-sm md:text-base">LinkedIn</span>
+                </div>
+              </a>
+              
             </div>
           </motion.div>
         </div>

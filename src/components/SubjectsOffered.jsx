@@ -56,7 +56,7 @@ const SubjectsOffered = () => {
             <li>
               <div className={styles.subjectCard}>
                 <figure className={`${styles.cardBanner} ${styles.imgHolder}`} style={{ '--width': 370, '--height': 220 }}>
-                  <img src="/c.png" width="370" height="220" alt="Undergraduate Mathematics" className={styles.imgCover} />
+                  <img src="/math.png" width="370" height="220" alt="Undergraduate Mathematics" className={styles.imgCover} />
                 </figure>
 
                 <div className={styles.cardContent}>
@@ -87,26 +87,26 @@ const SubjectsOffered = () => {
         <div className={styles.subjectCategory}>
           <h3 className={styles.categoryTitle}>Coding</h3>
           <ul className={styles.gridList}>
-            {/* Coding - Python */}
+            {/* Coding - Python for Kids */}
             <li>
               <div className={styles.subjectCard}>
                 <figure className={`${styles.cardBanner} ${styles.imgHolder}`} style={{ '--width': 370, '--height': 220 }}>
-                  <img src="/cd.png" width="370" height="220" alt="Python Coding" className={styles.imgCover} />
+                  <img src="/kids.png" width="370" height="220" alt="Python Programming for Kids" className={styles.imgCover} />
                 </figure>
 
                 <div className={styles.cardContent}>
                   <span className={styles.badge}>Coding</span>
-                  <h3 className={styles.cardTitle}>Python Programming</h3>
+                  <h3 className={styles.cardTitle}>Python Programming for Kids</h3>
                   <p className={styles.cardDescription}>
-                    Learn Python from scratch, data analysis, and machine learning. Ideal for beginners and intermediate learners.
+                    Teaching Python in a fun and interactive way for young learners. Introduction to programming concepts and basic coding skills.
                     {codingExpanded.python && (
                       <span className={styles.expandedText}>
                         <br /><br />
-                        I offer a comprehensive course for Python programming, covering fundamentals, data analysis, and machine learning.
-                        The course is designed for beginners as well as intermediate learners who want to enhance their skills. We will
-                        cover practical applications, libraries, and frameworks used in the industry. This is a hands-on course with lots of coding exercises and real-world projects.
+                        I offer engaging Python programming lessons designed specifically for kids. Students will learn the basics of coding
+                        through interactive projects and games. We will cover topics such as Python syntax, loops, and conditionals, and work
+                        on simple programs to build a strong foundation in programming. This course aims to make learning programming fun and accessible.
                         <br /><br />
-                        Additionally, I provide support for Python-based competitive programming and project-based learning.
+                        Additionally, we explore Scratch programming to introduce more complex concepts in a visual and intuitive manner.
                       </span>
                     )}
                   </p>

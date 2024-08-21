@@ -2,28 +2,24 @@ import React from 'react';
 import styles from './Subjects.module.css';
 
 const mathsSubjects = [
-  "Maths Beginner-Expert",
-  "CAT Maths",
-  "Linear Algebra Beginner-Expert",
-  "Number Theory Beginner-Expert",
-  "Engineering Mathematics (B.Tech)",
-  "Modern Algebra Beginner-Expert",
-  "Math & Reasoning Beginner-Expert",
-  "Math (ICSE) Beginner-Expert",
-  "CBSE Math Beginner-Expert",
-  "Math (11th)",
-  "Math (12th)",
-  "Math (class 10)"
+  "CBSE Mathematics",
+  "Pre-Algebra",
+  "Algebra 1, 2, and 3",
+  "Geometry",
+  "Calculus",
+  "Competitive Math",
+  "Linear Algebra",
+  "Number Theory",
+  "Modern Algebra",
+  "Ordinary and Partial Differential Equations"
 ];
 
 const codingSubjects = [
-  "SQL Beginner-Expert",
-  "Data Analyst Beginner-Expert",
-  "Python for Beginners",
-  "Computer (CBSE) Beginner-Expert",
-  "CLAT Mathematics",
-  "Computer (ICSE) Beginner-Expert",
-  "Coding & Programming Beginner-Expert"
+  "Coding for Kids",
+  "Python",
+  "Scratch Programming",
+  "SQL",
+  "HTML/CSS/JavaScript"
 ];
 
 const Subjects = () => {

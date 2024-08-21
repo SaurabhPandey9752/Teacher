@@ -19,42 +19,42 @@ const Services = () => {
         <div className={`${styles.content} ${styles.grid}`}>
           <div className={styles.box}>
             <div className={styles.img}>
-              <img src="https://img.icons8.com/ios/50/000000/machine-learning.png" alt="Machine Learning" />
+              <img src="https://img.icons8.com/ios/50/000000/machine-learning.png" alt="Mathematics Instruction" />
             </div>
             <div className={styles.text}>
-              <h3>Machine Learning</h3>
+              <h3>Mathematics Instruction</h3>
               <hr />
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Expert in teaching Math from basics to advanced, covering CBSE, ICSE, and American curriculums including Pre-Algebra, Algebra, and Calculus.</p>
             </div>
           </div>
           <div className={styles.box}>
             <div className={styles.img}>
-              <img src="https://img.icons8.com/ios/50/000000/safety-collection-place.png" alt="Social Network Analysis" />
+              <img src="https://img.icons8.com/ios/50/000000/safety-collection-place.png" alt="Competitive Exam Preparation" />
             </div>
             <div className={styles.text}>
-              <h3>Social Network Analysis</h3>
+              <h3>Competitive Exam Prep</h3>
               <hr />
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Guidance for Olympiads, JEE Mains, SAT, and more with strategic insights and rigorous practice.</p>
             </div>
           </div>
           <div className={styles.box}>
             <div className={styles.img}>
-              <img src="https://img.icons8.com/ios/50/000000/learning.png" alt="Deep Learning" />
+              <img src="https://img.icons8.com/ios/50/000000/learning.png" alt="Mentorship and Guidance" />
             </div>
             <div className={styles.text}>
-              <h3>Deep Learning</h3>
+              <h3>Mentorship & Guidance</h3>
               <hr />
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Personalized teaching and career guidance to help you excel academically and professionally.</p>
             </div>
           </div>
           <div className={styles.box}>
             <div className={styles.img}>
-              <img src="https://img.icons8.com/ios/50/000000/depth-effect.png" alt="Natural Language Processing" />
+              <img src="https://img.icons8.com/ios/50/000000/depth-effect.png" alt="Coding and Data Analytics" />
             </div>
             <div className={styles.text}>
-              <h3>Natural Language Processing</h3>
+              <h3>Coding & Data Analytics</h3>
               <hr />
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Python and coding for beginners, plus data analysis with SQL, Power BI, and Tableau.</p>
             </div>
           </div>
         </div>
